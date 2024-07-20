@@ -7,7 +7,7 @@ import { connect } from 'cloudflare:sockets';
 
 // How to generate your own UUID:
 // https://www.uuidgenerator.net/
-let userID = '89b3cbba-e6ac-485a-9481-976a0415eab9';
+let userID = '81dc8c3f-8002-4792-b3ee-ed258d6a8d05';
 
 // https://www.nslookup.io/domains/cdn.xn--b6gac.eu.org/dns-records/
 // https://www.nslookup.io/domains/cdn-all.xn--b6gac.eu.org/dns-records/
@@ -199,8 +199,8 @@ export default {
                         });
 
                     default:
-                        // return new Response('Not found', { status: 404 });
-                        url.hostname = 'www.speedtest.net';
+                        return new Response('Not found', { status: 404 });
+                        url.hostname = 'sub.zsfan.us.kg';
                         url.protocol = 'https:';
                         request = new Request(url, request);
                         return await fetch(request);
